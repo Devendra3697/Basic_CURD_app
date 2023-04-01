@@ -1,0 +1,20 @@
+{% block content %} 
+<h1>Each post </h1>
+<div class="container">
+    <p>{{ post.title }}</p>
+    <p>{{ post.content }}</p>
+    <spna>
+        <a href="{% url 'home' %}">Back</a>
+        <div class="container">
+            <form method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" class="btn btn-primary" vlaue = "submit">
+            </form>
+            <a href="{% url 'home' %}">Back</a>
+        
+        </div>
+    </span>
+
+</div>
+{% endblock %}
